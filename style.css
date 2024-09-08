@@ -1,0 +1,200 @@
+/* General reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the front page */
+.front-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('lissa 1.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay for better contrast */
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    bottom: 20px; /* Adjust this value to move the button up or down */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #ff3b2d;
+    transform: scale(1.05);
+}
+
+/* Heart animation */
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover .heart {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Styling for the message page */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.love-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('love.avif') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+    animation: loveAnimation 10s infinite alternate;
+}
+
+@keyframes loveAnimation {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(161, 196, 253, 0.9), rgba(194, 233, 251, 0.9));
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.message-content {
+    text-align: left;
+}
+
+h1 {
+    color: #ff6f61;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+ul.tips {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+ul.tips li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    background: #ffffff90;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff3b2d;
+    transform: scale(1.05);
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease;
+}
+
+.visible {
+    display: block;
+    opacity: 1;
+    margin-top: 20px;
+    transition: opacity 1s ease;
+}
+
+.personal-comment {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.your-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ff6f61;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.personal-comment p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+}
